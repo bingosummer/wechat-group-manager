@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import request, render_template, session, redirect, url_for, current_app
 import logging
 import json
@@ -32,6 +33,7 @@ def portal():
         print msgs
         print groups
         portal_uri = wechat_client.get_portal_uri()
+        msgs = [u"你好"]
         wechat_client.send_msgs_to_groups(portal_uri, msgs, groups)
         return redirect(url_for('.portal'))
     #form = NameForm()
