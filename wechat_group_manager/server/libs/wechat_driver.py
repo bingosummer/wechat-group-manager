@@ -45,6 +45,10 @@ class WechatDriver(object):
             print e
 
     def send_msg(self, msg):
+<<<<<<< HEAD
+=======
+        print "send {0}".format(msg)
+>>>>>>> 835d09f338a762eaf349b2594f8d94b2c540918c
         edit_area = self.driver.find_element_by_id("editArea")
         edit_area.send_keys(msg)
         edit_area.send_keys(Keys.RETURN)
@@ -53,6 +57,10 @@ class WechatDriver(object):
         pass
 
     def select_group(self, group):
+<<<<<<< HEAD
+=======
+        print "select {0}".format(group)
+>>>>>>> 835d09f338a762eaf349b2594f8d94b2c540918c
         search_input = self.driver.find_element_by_class_name("frm_search")
         search_input.send_keys(group)
         time.sleep(5)
